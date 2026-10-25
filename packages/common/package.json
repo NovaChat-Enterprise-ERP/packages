@@ -1,0 +1,49 @@
+{
+  "name": "@novachat-enterprise-erp/common",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch --preserveWatchOutput",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "lint": "eslint src",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@novachat-enterprise-erp/contracts": "workspace:^",
+    "pino": "10.4.0",
+    "pino-http": "11.0.0",
+    "zod": "4.6.6",
+    "pino-pretty": "13.2.0"
+  },
+  "peerDependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@novachat-enterprise-erp/tsconfig": "workspace:*",
+    "@types/express": "5.0.6",
+    "@types/supertest": "7.2.1",
+    "express": "5.3.0",
+    "supertest": "7.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NovaChat-Enterprise-ERP/packages.git",
+    "directory": "packages/common"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}

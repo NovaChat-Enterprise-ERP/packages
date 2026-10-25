@@ -1,0 +1,29 @@
+{
+  "name": "novachat-packages",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write .",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "release": "pnpm -r publish --no-git-checks"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@types/node": "24.19.2",
+    "eslint": "9.39.5",
+    "prettier": "3.9.10",
+    "tsx": "4.23.15",
+    "turbo": "2.11.7",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1",
+    "vitest": "4.1.12"
+  }
+}
