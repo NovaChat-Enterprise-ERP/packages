@@ -33,7 +33,7 @@ export class InternalHttpClient {
         method: options.method ?? 'GET',
         headers,
         body: options.body === undefined ? undefined : JSON.stringify(options.body),
-        signal: AbortSignal.timeout(options.timeoutMs ?? 5_000),
+        signal: AbortSignal.timeout(options.timeoutMs ?? 15_000),
       });
     } catch {
       throw new ServiceUnavailableError(`Upstream ${this.baseUrl} is unreachable`);
